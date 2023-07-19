@@ -54,17 +54,14 @@ const femaleFilter = new lib.FemaleFilter();
 // Создаем итераторы
 const femaleIterator = new lib.Iterator(friends, femaleFilter);
 
-// Среди парней приглашаем только луших друзей и друзей лучших друзей
+// Среди парней приглашаем только лучших друзей и друзей лучших друзей
 const maleIterator = new lib.LimitedIterator(friends, maleFilter, 2);
 
 const invitedFriends = [];
 
 // Собираем пары «парень + девушка»
 while (!maleIterator.done() && !femaleIterator.done()) {
-    invitedFriends.push([
-        maleIterator.next(),
-        femaleIterator.next()
-    ]);
+    invitedFriends.push([maleIterator.next(), femaleIterator.next()]);
 }
 
 // Если остались девушки, то приглашаем остальных
