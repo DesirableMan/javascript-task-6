@@ -9,6 +9,6 @@
   "dependencies": {
     "eslint": "5.8.0",
     "eslint-config-hrundel": "1.4.0",
-    "mocha": "5.2.0"
+    "mocha": "10.2.0"
   }
 }
